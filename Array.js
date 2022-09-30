@@ -163,6 +163,32 @@ const output = users.filter(x => x.age<30).map(x => x.firstname)
 console.log(output)
 
 
+/*
+Space complexity = Memory or Example no. of variables
+Time Complexity = No. of line
+Time Complexity depends on the number of inputs.
+*/
+
+f(n) = 5n^2 +6n + 12
+
+n = [                ] is array
+5n^2 === Double loop which contains 5 line
+6n === is singe loop which contains 6 line
+12 === Outside the loop which contains 12 line
+
+for (){
+  for(){
+    //5 line
+  }
+}
+for(){
+  //6 line
+}
+
+// 12 line
+ Ref: https://www.javatpoint.com/data-structure-asymptotic-analysis
+
+
 
 
 
