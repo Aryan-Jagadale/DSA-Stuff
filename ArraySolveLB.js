@@ -83,9 +83,78 @@ let mx = getMinMax(arr)[0]
 let mn = getMinMax(arr)[1]
 console.log(mx,mn)
 
+/*Sort array in 0s,1s,2s*/
 
+/*1st approach*/
+sort012(arr, N)
+    {
+        let low = 0;
+        let mid = 0;
+        let high = N-1;
+        let temp = 0;
+        
+        while(mid <= high){
+            if(arr[mid] === 0){
+                temp = arr[low]
+                arr[low]= arr[mid]
+                arr[mid] = temp
+                low++;
+                mid++;
+                
+            }else if(arr[mid] === 1){
+                mid++;
+            }else{
+                temp = arr[mid];
+                arr[mid] = arr[high];
+                arr[high] = temp;
+                
+                high--
+            }
+        }
+    }
+/* 2nd approach */
 
-
+  sort012(arr, n)
+    {
+        let i, cnt0 = 0, cnt1 = 0, cnt2 = 0;
+ 
+    // Count the number of 0s, 1s and 2s in the array
+    for (i = 0; i < n; i++) {
+        switch (arr[i]) {
+        case 0:
+            cnt0++;
+            break;
+        case 1:
+            cnt1++;
+            break;
+        case 2:
+            cnt2++;
+            break;
+        }
+    }
+ 
+    // Update the array
+    i = 0;
+ 
+    // Store all the 0s in the beginning
+    while (cnt0 > 0) {
+        arr[i++] = 0;
+        cnt0--;
+    }
+ 
+    // Then all the 1s
+    while (cnt1 > 0) {
+        arr[i++] = 1;
+        cnt1--;
+    }
+ 
+    // Finally all the 2s
+    while (cnt2 > 0) {
+        arr[i++] = 2;
+        cnt2--;
+    }
+    
+    }
 
 
 
