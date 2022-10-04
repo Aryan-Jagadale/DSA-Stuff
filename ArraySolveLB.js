@@ -156,7 +156,46 @@ sort012(arr, N)
     
     }
 
+/*
+Move all negative numbers to beginning and positive to end with constant extra space
+*/
+
+let arr = [-12, 11, -13, -5, 6, -7, 5, -3, -6]
+//Using sort method
+//console.log(arr.sort(function(a,b) {return a-b}))
+
+//Using for loop
+/*let j = 0
+for( let i=0; i< arr.length; i++){
+  if(arr[i] < 0){
+    if(i != j){
+      let temp = arr[i]
+      arr[i] = arr [j]
+      arr[j] = temp
+    }
+    j++
+  }
+}
+console.log(arr)*/
+
+//Check another approach in gfs
+
+//Using Dutch National Flag Algo
+ let low = 0
+ let high = arr.length - 1
+ while(low < high){
+   if(arr[low]<0){
+     low+=1
+   }else if(arr[high]>0){
+     high-=1
+   }else{
+     let temp = arr[low]
+     arr[low] = arr[high]
+     arr[high] = temp
+   }
+ }
+
+console.log(arr)
 
 
-/**/
 
