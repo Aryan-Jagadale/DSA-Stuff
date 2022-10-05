@@ -197,5 +197,16 @@ console.log(arr)*/
 
 console.log(arr)
 
+/*Union of two arrays*/
+//JS Approach
+var arr1 = [ 1, 2, 4, 5, 6 ];
+var arr2 = [ 2, 3, 5, 7 ];
+var m = arr1.length;
+var n = arr2.length;
+
+const union = Array.from(new Set([...arr1,...arr2])).length
+
+console.log(union)
+
 
 
