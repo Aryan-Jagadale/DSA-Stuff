@@ -207,6 +207,19 @@ var n = arr2.length;
 const union = Array.from(new Set([...arr1,...arr2])).length
 
 console.log(union)
+//Using SET approach
+
+let s = new Set();
+        
+        for(let i=0; i<n; i++){
+            s.add(a[i]);
+        }
+        for(let i=0; i<m; i++){
+            s.add(b[i]);
+        }
+        return s.size
+
+
 
 
 
