@@ -219,7 +219,20 @@ let s = new Set();
         }
         return s.size
 
+/* Cyclically rotate an array by one */
 
+ rotate(arr,n){
+        var e = arr.splice(n-1,1);
+        arr.unshift(e);
+        return arr;
+    }
+
+ rotate(arr,n){
+        //code here
+        arr.unshift(arr[n-1])
+        arr.pop()
+        return arr
+    }
 
 
 
