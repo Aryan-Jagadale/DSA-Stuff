@@ -234,5 +234,15 @@ let s = new Set();
         return arr
     }
 
+/*Find the Duplicate Number*/ 
+const arr = [1, 1, 2, 3, 4, 5, 5]
 
+let duplicateArray = []
+    let tempArray = [...arr].sort()
+    for(let i = 0; i < tempArray.length; i++){
+        if(tempArray[i+1] === tempArray[i] ){
+           duplicateArray.push(tempArray[i])
+        }
+    }
+console.log(duplicateArray)
 
